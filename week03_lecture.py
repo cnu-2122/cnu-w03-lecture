@@ -48,3 +48,30 @@ def greet(name):
 
 greeting_message = greet('Charlotte')
 print(greeting_message + ' How are you doing this fine morning?')
+
+
+# Slicing and indexing
+
+def every_mth_character(my_string, m):
+    '''
+    Returns a string of every mth character in my_string.
+    '''
+    # With a loop
+    output = ''
+    # counter = 0
+    for counter, char in enumerate(my_string):
+        if counter % m == 0:
+            output += char
+        # counter += 1
+    return output
+
+def every_mth_character(my_string, m):
+    '''
+    Returns a string of every mth character in my_string.
+    '''
+    return my_string[::m]
+    # output = my_string[::m]
+    # return output
+    
+
+print(every_mth_character('Python is great!', 2))
